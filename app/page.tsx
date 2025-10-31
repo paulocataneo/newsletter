@@ -19,25 +19,31 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col justify-between bg-[#f8f8f8] px-6 py-14 font-sans">
+    <main className="flex min-h-screen flex-col justify-between bg-white px-6 py-14 font-sans">
       <div className="flex flex-col items-center justify-center flex-1 text-center">
+
+        {/* Logo */}
+        <div className="mb-6 opacity-90">
+          <img
+            src="/logo-hexawise.png"
+            alt="Hexawise Logo"
+            className="w-20 h-auto mx-auto"
+          />
+        </div>
 
         <div
           className={`max-w-2xl transition-all duration-700 ease-out ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
           }`}
         >
-          {/* Título */}
-          <h1 className="text-4xl sm:text-5xl font-medium text-gray-900 leading-tight mb-8 tracking-tight">
-            Empreendedorismo, sem perder tempo.
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
+            Empreender com estratégia e clareza.
           </h1>
 
-          {/* Subtexto */}
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl mx-auto">
+          <p className="text-lg text-[#4A5568] mb-10 leading-relaxed max-w-xl mx-auto">
             Receba atualizações semanais por e-mail.
           </p>
 
-          {/* Formulário com input clean */}
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 w-full max-w-md mx-auto"
@@ -46,27 +52,26 @@ export default function Home() {
               type="email"
               name="email"
               required
-              placeholder="Seu email principal"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 text-center placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#15803d]/50 transition"
+              placeholder="Digite seu e-mail principal"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 text-center placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2338]/30 transition"
             />
 
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-[#15803d] text-white rounded-lg font-medium hover:bg-[#136a32] transition-all duration-200 active:scale-[0.97]"
+              className="w-full px-6 py-3 bg-[#0C2338] text-white rounded-lg font-medium hover:bg-[#0A1A2A] transition-all duration-300 active:scale-[0.98]"
             >
               Inscrever-se
             </button>
           </form>
 
-          {/* Rodapé pequeno */}
-          <p className="text-sm text-gray-500 mt-6">
-            Gratuito. Zero spam. Cancele quando quiser.
+          <p className="text-sm text-[#6B7280] mt-6">
+            Conteúdo gratuito e exclusivo. Zero spam. Cancele quando quiser.
           </p>
         </div>
       </div>
 
-      <footer className="text-center text-gray-400 text-xs mt-12">
-        © Cataneo Contabilidade · {new Date().getFullYear()}
+      <footer className="text-center text-[#9CA3AF] text-xs mt-12">
+        © HEXAWISE · {new Date().getFullYear()}
       </footer>
     </main>
   );
